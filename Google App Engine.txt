@@ -1,0 +1,65 @@
+Google App Engine Practical Guide
+
+This document explains how to install Google Cloud SDK, create a simple Hello World web application using Python Flask, and run the application locally without billing or deployment.
+
+
+Step 1: Install Google Cloud SDK
+
+Download and install Google Cloud SDK from: https://cloud.google.com/sdk/docs/install
+After installation verify:
+gcloud version
+
+
+Step 2: Login to Google Cloud
+
+Open Google Cloud SDK Shell.
+gcloud auth login
+
+
+Step 3: Create a Project
+
+Create a unique Google Cloud project.
+gcloud projects create aniket-app-2026 gcloud config set project aniket-app-2026
+
+Step 4: Create Application Folder
+
+Create a new folder for your web application.
+mkdir myapp cd myapp
+
+
+Step 5: Install Flask
+
+Install Flask framework using pip.
+pip install flask
+
+
+Step 6: Create Python File
+
+Create a Python file named main.py.
+notepad main.py
+ 
+Step 7: Paste Python Code
+
+Paste the following code inside main.py.
+from flask import Flask app = Flask( name )
+@app.route('/') def home():
+return "Hello World"
+if  name == ' main ': app.run(debug=True)
+
+
+Step 8: Run the Application
+
+Run the Flask application locally.
+python main.py
+
+
+Step 9: Open Browser
+
+Open the following URL in your browser.
+http://127.0.0.1:5000
+
+
+Output
+
+The browser will display the following message.
+Hello World
